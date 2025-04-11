@@ -70,7 +70,7 @@ def package_docs(skybolt_source_dir: Path, package_dir: Path):
     (output_dir / "sitemap.xml.gz").unlink(missing_ok=True)
         
 
-BUILD_STAGES = ["download_resources", "build", "package", "package_docs"]
+BUILD_STAGES = ["build", "package", "package_docs"]
 
 
 if __name__ == "__main__":
