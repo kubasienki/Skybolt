@@ -101,8 +101,6 @@ if __name__ == "__main__":
     output_dir.mkdir(exist_ok=True)
 
     # Run build stages
-    if should_run_stage("download_resources"):
-        download_resources(output_dir)
     if should_run_stage("build"):
         build(skybolt_source_dir, skybolt_build_dir)
     if should_run_stage("package"):
