@@ -1,5 +1,24 @@
 name: Build Skybolt
 on:
+  workflow_dispatch:
+    inputs:
+      os:
+        default: ubuntu-22.04
+        type: string
+      python-version:
+        default: "3.11.x"
+        type: string
+      python-arch:
+        default: "x64"
+        type: string
+      build_docs:
+        description: Build the documentation?
+        type: boolean
+        default: true
+      upload:
+        description: Upload resulting artifact?
+        type: boolean
+        default: false  
   workflow_call:
     inputs:
       os:
